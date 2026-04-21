@@ -16,7 +16,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-               bat 'xcopy /E /Y * C:\xampp\htdocs\'
+               bat 'xcopy /E /Y * C:\\xampp\\htdocs\\'
             }
         }
     }
