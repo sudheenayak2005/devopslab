@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/sudheenayak2005/devopslab.git'
+               git branch: 'main', url: 'https://github.com/sudheenayak2005/devopslab.git'
             }
         }
 
@@ -16,7 +16,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh 'cp -r * /var/www/html/'
+               bat 'xcopy /E /Y * C:\xampp\htdocs\'
             }
         }
     }
